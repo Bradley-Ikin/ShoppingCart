@@ -140,7 +140,7 @@ namespace ShoppingCart.Controllers
         [HttpDelete]
         public IActionResult Delete(int? id)
         {
-            var product = _unitOfWork.Product.GetT(x=>x.Id== id);
+            var product = _unitOfWork.Product.GetT(x => x.Id == id);
             if(product == null)
             {
                 return Json(new { success = false, message = "Error in fetching data" });

@@ -22,8 +22,7 @@
                 <div class="collapse navbar-collapse" id="navbarColor01">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">
-                                Home
+                            <a asp-area="customer" asp-action="Index" asp-controller="home" class="nav-link active">Home
                                 <span class="visually-hidden">(current)</span>
                             </a>
                         </li>
@@ -47,6 +46,8 @@
                             </div>
                         </li>*@
                     </ul>
+                    <partial name="_LoginPartial"/>
+
                     @*<form class="d-flex">
                         <input class="form-control me-sm-2" type="text" placeholder="Search">
                         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
@@ -72,7 +73,7 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdn.tiny.cloud/1/lpzg5fg777luqqlmo1qsve7otn5fh2dwzn7s4y97rdnutytt/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+   @* <script src="https://cdn.tiny.cloud/1/lpzg5fg777luqqlmo1qsve7otn5fh2dwzn7s4y97rdnutytt/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>*@
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
